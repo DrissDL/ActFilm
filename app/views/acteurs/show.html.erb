@@ -1,10 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<p class="m-4" style="color: green"><%= notice %></p>
 
 <%= render @acteur %>
 
-<div>
-  <%= link_to "Edit this acteur", edit_acteur_path(@acteur) %> |
-  <%= link_to "Back to acteurs", acteurs_path %>
-
-  <%= button_to "Destroy this acteur", @acteur, method: :delete %>
+<div class="mx-3 d-flex">
+  <%= link_to "Modifier cet acteur", edit_acteur_path(@acteur), class:"btn btn-outline-success mx-1" %>
+  <%= button_to "Supprimmer cet acteur", @acteur, method: :delete, class:"btn btn-outline-danger mx-1" %>
+</div>
+<div class="m-4">
+  <%= link_to "Retour à la page d'accueil", acteurs_path%>
 </div>
