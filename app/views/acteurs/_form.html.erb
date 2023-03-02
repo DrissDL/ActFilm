@@ -1,0 +1,42 @@
+<%= form_with(model: acteur) do |form| %>
+  <% if acteur.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(acteur.errors.count, "error") %> prohibited this acteur from being saved:</h2>
+
+      <ul>
+        <% acteur.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :Nom, style: "display: block" %>
+    <%= form.text_field :Nom %>
+  </div>
+
+  <div>
+    <%= form.label :Photo, style: "display: block" %>
+    <%= form.text_area :Photo %>
+  </div>
+
+  <div>
+    <%= form.label :Anniversaire, style: "display: block" %>
+    <%= form.date_field :Anniversaire %>
+  </div>
+
+  <div>
+    <%= form.label :Biographie, style: "display: block" %>
+    <%= form.text_area :Biographie %>
+  </div>
+
+  <div>
+    <%= form.label :Filmographie, style: "display: block" %>
+    <%= form.text_area :Filmographie %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
