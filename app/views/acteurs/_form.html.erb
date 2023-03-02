@@ -1,6 +1,6 @@
 <%= form_with(model: acteur) do |form| %>
   <% if acteur.errors.any? %>
-    <div style="color: red">
+    <div style="color: red" class="col-md-6">
       <h2><%= pluralize(acteur.errors.count, "error") %> prohibited this acteur from being saved:</h2>
 
       <ul>
@@ -11,32 +11,35 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :Nom, style: "display: block" %>
-    <%= form.text_field :Nom %>
+  <div class="mx-5">
+  <div class="col-4 mt-4">
+    <%= form.label :Nom, style: "display: block", class: "form-label" %>
+    <%= form.text_field :Nom, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :Photo, style: "display: block" %>
-    <%= form.text_area :Photo %>
+   <div class="col-4 mt-4">
+    <%= form.label :Photo, style: "display: block", class: "form-label" %>
+    <%= form.text_area :Photo, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :Anniversaire, style: "display: block" %>
-    <%= form.date_field :Anniversaire %>
+  <div class="col-4 mt-4">
+    <%= form.label :Anniversaire, style: "display: block", class: "form-label" %>
+    <%= form.date_field :Anniversaire, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :Biographie, style: "display: block" %>
-    <%= form.text_area :Biographie %>
+  <div class="col-6 mt-4">
+    <%= form.label :Biographie, style: "display: block", class: "form-label" %>
+    <%= form.text_area :Biographie, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :Filmographie, style: "display: block" %>
-    <%= form.text_area :Filmographie %>
+  <div class="col-6 mt-4">
+    <%= form.label :Filmographie, style: "display: block", class: "form-label" %>
+    <%= form.text_area :Filmographie, class:"form-control" %>
   </div>
+  <div class="mt-5">
+    <%= form.submit class:"btn btn-outline-dark" %>
+  </div>
+</div>
 
-  <div>
-    <%= form.submit %>
-  </div>
+
 <% end %>
