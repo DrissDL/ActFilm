@@ -1,5 +1,5 @@
 <div class="card mb-4 bg-light">
-  <img src="<%= acteur.Photo %>" class="img-fluid" alt="photo <%= acteur.Nom %>">
+  <img src="<%= acteur.Photo %>" class="img-fluid" <%= acteur.Nom %>">
   <div class="card-body">
     <h2><%= acteur.Nom %></h2>
     <%= link_to "Découvrir cet acteur", acteur , class:"btn btn-outline-dark stretched-link" %>
