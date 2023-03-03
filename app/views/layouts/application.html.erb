@@ -18,13 +18,13 @@
         </a>
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Accueil</a>
+            <%= link_to "Accueil", acteurs_path ,class:"nav-link active text-light"%>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">Créer un acteur</a>
+            <%= link_to "Créer un acteur", new_acteur_path , class:"nav-link text-light"%>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">A propos</a>
+            <a class="nav-link text-light" href="#a-propos">A propos</a>
           </li>
         </ul>
       </div>
@@ -34,7 +34,7 @@
     </div>
     <footer class="bg-black text-center text-light text-lg-start mt-3 pt-3">
   <div class="container p-5">
-    <div class="row">
+    <div id="a-propos" class="row">
         <h5 class="text-uppercase mb-4">À propos de nous</h5>
         <p >
         Pourquoi ActFilm ? Nous sommes deux passionnés par le monde du cinéma et lancer notre propre application nous semblait impossible. Nous avons travaillé pendant plusieurs semaines pour vous proposer un concept simple : Représenter les acteurs les plus célèbres dans les activités de la vie quotidienne (d’où le nom ActFilm). 
