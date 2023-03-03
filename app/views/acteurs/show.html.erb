@@ -1,7 +1,7 @@
 <p class="m-4" style="color: green"><%= notice %></p>
-
+<div class="m-4">
 <%= render @acteur %>
-
+</div>
 <div class="mx-3 d-flex">
   <%= link_to "Modifier cet acteur", edit_acteur_path(@acteur), class:"btn btn-outline-success mx-1" %>
   <%= button_to "Supprimmer cet acteur", @acteur, method: :delete, class:"btn btn-outline-danger mx-1" %>

@@ -5,7 +5,9 @@
 <div id="acteurs" class="m-5 d-flex">
   <% @acteurs.each do |acteur| %>
     <div class="card m-5" , style="width: 18rem;">
+    <div class="m-4">
     <%= render acteur %>
+    </div>
     <p class="mx-4">
       <%= link_to "Découvrir cet acteur", acteur , class:"btn btn-outline-dark"%>
     </p>
